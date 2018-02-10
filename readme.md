@@ -1,4 +1,4 @@
-# ![SecurityTODOs]
+# Security TODOs
 
 > Helping you get organized with home computer security tasks
 
