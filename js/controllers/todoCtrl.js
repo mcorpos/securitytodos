@@ -15,17 +15,25 @@ angular.module('securitytodos')
         $scope.editedTodo = null;
 
         $scope.$watch('todos', function () {
+
+            // counts to show tally
             $scope.remainingCount = $filter('filter')(todos, { completed: false }).length;
+            $scope.points = $scope.countPoints();
+
             $scope.completedCount = todos.length - $scope.remainingCount;
             $scope.allChecked = !$scope.remainingCount;
 
-            // calculate points for all completed items
-            $scope.points = $scope.countPoints();
+            // counts used to show/hide elements
+            $scope.beginnerCount     = $filter('filter')(todos, { level: 'beginner' }).length;
+            $scope.intermediateCount = $filter('filter')(todos, { level: 'intermediate' }).length;
+            $scope.advancedCount     = $filter('filter')(todos, { level: 'advanced' }).length;
 
+            // show UI elements?
             $scope.showAddAnyTodos          = $scope.isShowAddAnyTodos();
             $scope.showAddBeginnerTodos     = $scope.isShowAddBeginnerTodos();
             $scope.showAddIntermediateTodos = $scope.isShowAddIntermediateTodos();
             $scope.showAddAdvancedTodos     = $scope.isShowAddAdvancedTodos();
+
         }, true);
 
         // Monitor the current route for changes and adjust the filter accordingly.

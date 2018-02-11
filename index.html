@@ -43,19 +43,19 @@
                             <a ng-class="{selected: status == ''} " href="#/">All</a>
                         </li>
                         <li>
-                            <a ng-class="{selected: status == 'active'}" href="#/active">Active</a>
+                            <a ng-class="{selected: status == 'active'}" href="#/active" ng-show="remainingCount">Active</a>
                         </li>
                         <li>
-                            <a ng-class="{selected: status == 'completed'}" href="#/completed">Completed</a>
+                            <a ng-class="{selected: status == 'completed'}" href="#/completed" ng-show="completedCount">Completed</a>
                         </li>
                         <li>
-                            <a ng-class="{selected: level == 'beginner'}" href="#/beginner">Beginner</a>
+                            <a ng-class="{selected: level == 'beginner'}" href="#/beginner" ng-show="beginnerCount">Beginner</a>
                         </li>
                         <li>
-                            <a ng-class="{selected: level == 'intermediate'}" href="#/intermediate">Intermediate</a>
+                            <a ng-class="{selected: level == 'intermediate'}" href="#/intermediate" ng-show="intermediateCount">Intermediate</a>
                         </li>
                         <li>
-                            <a ng-class="{selected: level == 'advanced'}" href="#/advanced">Advanced</a>
+                            <a ng-class="{selected: level == 'advanced'}" href="#/advanced" ng-show="advancedCount">Advanced</a>
                         </li>
                     </ul>
                     <button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed</button>
