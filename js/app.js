@@ -1,17 +1,17 @@
 /*global angular */
 
 /**
- * The main TodoMVC app module
+ * The main Security TODOs app module
  *
  * @type {angular.Module}
  */
-angular.module('todomvc', ['ngRoute', 'ngResource'])
+angular.module('securitytodos', ['ngRoute', 'ngResource'])
 	.config(function ($routeProvider) {
 		'use strict';
 
 		var routeConfig = {
 			controller: 'TodoCtrl',
-			templateUrl: 'todomvc-index.html',
+			templateUrl: 'securitytodos-index.html',
 			resolve: {
 				store: function (todoStorage) {
 					// Get the storage module

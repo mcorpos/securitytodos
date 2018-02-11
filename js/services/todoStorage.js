@@ -5,7 +5,7 @@
  *
  * It returns promises for all changes to the model.
  */
-angular.module('todomvc')
+angular.module('securitytodos')
 	.factory('todoStorage', function ($injector) {
 		'use strict';
 
@@ -16,7 +16,7 @@ angular.module('todomvc')
 	.factory('localStorage', function ($q) {
 		'use strict';
 
-		var STORAGE_ID = 'todos-angularjs';
+		var STORAGE_ID = 'securitytodos';
 
 		var store = {
 			todos: [],
